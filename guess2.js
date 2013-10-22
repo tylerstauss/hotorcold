@@ -1,3 +1,38 @@
+$(document).ready(function(){
+ var correct = Math.floor((Math.random() * 100)+1);
+ //document.write(correct);
+ var answer = "";
+ //document.write(guess);
+ var numGuesses = 0;
+
+ //function tries(numGuesses){
+  //  numGuesses = numGuesses + 1;
+   // document.write(numGuesses);}
+
+ function guess(){
+    var answer = $('#userguess').val();
+    if (answer >100 || answer<1 || isNaN(answer)) {
+                alert("Please enter a whole number between 1 and 100");
+                }
+ }  
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
   var correct = Math.floor((Math.random() * 100)+1);
        	//document.write(correct);
        
@@ -7,7 +42,7 @@
             if (guess >100 || guess<1 || isNaN(guess)) {
             	alert("Please enter a whole number between 1 and 100");
             	} else if (Math.abs(guess - correct) <= 3 && Math.abs(guess - correct) >= 1){
-            		alert("Scorching!");
+            		("Scorching!");
             	} else if (Math.abs(guess - correct) <= 10 && Math.abs(guess - correct) > 3) {
             		alert("Hot!");
             	} else if (Math.abs(guess - correct) <= 20 && Math.abs(guess - correct) > 10) {
@@ -26,3 +61,5 @@
             function newGame(){
             var correct = Math.floor((Math.random() * 100)+1);
             }
+
+            */
