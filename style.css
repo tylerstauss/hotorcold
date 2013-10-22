@@ -65,7 +65,7 @@ table {
 }
 
 #box {
-	height: 170px;
+	height: 120px;
 	width: 200px;
 	background-color: rgb(200, 25,25);
 	border: 1px solid #000;
@@ -78,12 +78,14 @@ table {
 	height: 50px;
 	margin: 10px auto;
 	font-size: .8em;
+	border-radius: 5px;
+	border: 1px solid #ccc;
 }
 #guess {
 	position: relative;
 	top: 10px;
 	right: 0px;
-	height: 40px;
+	height: 25px;
 	width: 140px;
 	padding: 20px;
 	text-align: center;

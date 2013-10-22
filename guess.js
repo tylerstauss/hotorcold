@@ -1,5 +1,12 @@
   var correct = Math.floor((Math.random() * 100)+1);
        	//document.write(correct);
+
+
+       	function newGame()
+            {
+            correct = Math.floor((Math.random() * 100)+1);
+            
+            }
        
         function yourGuess()
         	{
@@ -23,6 +30,3 @@
             	}
             }
 
-            function newGame(){
-            var correct = Math.floor((Math.random() * 100)+1);
-            }

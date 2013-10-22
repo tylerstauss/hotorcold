@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	 <script language="javascript" type="text/javascript" src="jquery.js"></script>
 	 <script language="javascript" type="text/javascript" src="guess.js" >
-	 	//document.write(correct);
+	 
 	 </script>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Hot or Cold</title>
@@ -18,9 +18,10 @@
 
 		<div id="box">
 		<input id="userguess" type="number" placeholder="enter number here" required name="number">
-		<input type="submit"  onclick="yourGuess()" value="Guess" id="guess">
-		<input type="submit" value="Start New Game" onclick="newGame()" id="newgame">
-		</div>
+		<input  id="guess" type="submit" onclick="yourGuess()" value="Guess">
+		</div><!-- #container -->
+		
+		<input  id="newgame" type="submit" onclick="newGame()" value="Start New Game">
 
 		<p id="scorching"></p>
 		<p id="hot"></p>
@@ -33,7 +34,7 @@
 	
 	
 		
-	</div>
+	</div><!-- .container -->
 
 </body>
 </html>
