@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <!--<script language="javascript" type="text/javascript" src="jquery.js"></script>-->
+	 <script language="javascript" type="text/javascript" >
+	 	
+        var correct = Math.floor((Math.random() * 100)+1);
+       	document.write(correct);
+       
+        var guess = "null"
+        function yourGuess()
+        	{
+            var guess =  document.getElementById("userguess").value;
+            if (guess >100 || guess<1 || isNaN(guess)) {
+            	alert("Please enter a whole number between 1 and 100");
+            	}else if (guess > correct){
+            		alert("Your guess is too high!");
+            	} else if (guess < correct) {
+            		alert("Your guess is too low!");
+            	} else {
+            		alert("Good guess! You guessed " + guess + " and the correct number is " + correct );
+            	}
+            }
+            
+        
+         
+	 </script>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hot or Cold</title>
+
+</head>
+<body>
+		<h1>Hotter or Colder?</h1>
+		<p>
+			</p>
+
+	
+		<input id="userguess" type="number" placeholder="enter number here" required name="number">
+		<input type="submit"  onclick="yourGuess()" value="Guess">
+	
+	<form action="javascript:history.go(0)">
+		<input type="submit" value="Start New Game">
+	</form>
+
+</body>
+</html>
