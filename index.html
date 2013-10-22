@@ -13,11 +13,14 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Hot or Cold?</h1>
+		<h1><span class="hot">Hot</span> or <span class="cold">Cold</span>?</h1>
+		<h3>We are thinking of a number between 1 and 100...</h3>
 
-	
+		<div id="box">
 		<input id="userguess" type="number" placeholder="enter number here" required name="number">
-		<input type="submit"  onclick="yourGuess()" value="Guess">
+		<input type="submit"  onclick="yourGuess()" value="Guess" id="guess">
+		<input type="submit" value="Start New Game" onclick="newGame()" id="newgame">
+		</div>
 
 		<p id="scorching"></p>
 		<p id="hot"></p>
@@ -28,9 +31,8 @@
 		<p id="answer"></p>
 
 	
-	<form action="javascript:history.go(0)">
-		<input type="submit" value="Start New Game">
-	</form>
+	
+		
 	</div>
 
 </body>

@@ -6,7 +6,7 @@
             var guess =  document.getElementById("userguess").value;
             if (guess >100 || guess<1 || isNaN(guess)) {
             	alert("Please enter a whole number between 1 and 100");
-            	} else if (Math.abs(guess - correct) <= 3 && Math.abs(guess - correct) > 0){
+            	} else if (Math.abs(guess - correct) <= 3 && Math.abs(guess - correct) >= 1){
             		("Scorching!");
             	} else if (Math.abs(guess - correct) <= 10 && Math.abs(guess - correct) > 3) {
             		alert("Hot!");
@@ -21,4 +21,8 @@
             	} else if (guess == correct) {
             		alert("Good guess! You guessed " + guess + " and the correct number is " + correct );
             	}
+            }
+
+            function newGame(){
+            	var correct = Math.floor((Math.random() * 100)+1);
             }
