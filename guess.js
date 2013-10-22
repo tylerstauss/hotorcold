@@ -1,21 +1,18 @@
-  var correct = Math.floor((Math.random() * 100)+1);
+var correct = Math.floor((Math.random() * 100)+1);
        	//document.write(correct);
        	var guess = "";
-
+var guess_array = [];
 function yourGuess()
 	{
     var guess =  $('#usernumber').val();
-    //document.getElementById("userguess").value;
 
     // Appends guess to previous guesses list
     function prevGuesses(guess) {
     	$('#prev_guesses').prepend("<li>" + guess + "</li>");
     }
     
-
-	    
-	if (guess >100 || guess<1 || isNaN(guess)) {
-		
+    //validates number - ensures input is number between 1 and 100    
+	if (guess >100 || guess<1 || isNaN(guess)) {	
     	$('#answer').html("Please enter a whole number between 1 and 100");
     }	else {
 
@@ -39,12 +36,28 @@ function yourGuess()
     		$('#answer').html('<span id="freezing">Freezing!</span>');
     		//alert("Freezing!");
     	} else if (guess == correct) {
-    		$('#answer').html("Good guess! You guessed " + guess + " and the correct number is " + correct + "!!!");
+    		$('#answer').html("Good guess! You guessed " + guess + " and the correct number is " + correct + ". It took you " + (guess_array.length + 1) + " guesses!!!");
+    		$('#hottercolder').addClass('hidden');
     		//alert("Good guess! You guessed " + guess + " and the correct number is " + correct );
     	}
 
 
     	prevGuesses(guess);
+    	guess_array.push(guess);
+    	$('#totalguesses').html("<span class='totalguesses'>" + guess_array.length + "</span>");
+
+    	var num_guesses = guess_array.length;
+    	var last_guess = guess_array[num_guesses - 1]; 
+    	var prev_guess = guess_array[num_guesses - 2];
+
+    	if (num_guesses > 1) {
+    	if (Math.abs(correct - last_guess) < Math.abs(correct - prev_guess)) {
+    		$('#hottercolder').html('<span>and getting hotter!</span>');
+    	} else {
+    		$('#hottercolder').html('<span>but getting colder...</span>');
+    	}
+    }
+    	
     }
 }
 
@@ -58,10 +71,11 @@ function yourGuess()
 }
 
 
-
+*/
 
 function newGame(){
 	    correct = Math.floor((Math.random() * 100)+1);
+	    var guess_array = [];
 	    }
 
-*/
+

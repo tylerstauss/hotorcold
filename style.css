@@ -138,3 +138,11 @@ h5 {
 	text-decoration: underline;
 	margin: 10px auto;
 }
+
+#totalguesses {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
