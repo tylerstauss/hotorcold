@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	 <script language="javascript" type="text/javascript" src="jquery.js"></script>
 	 <script language="javascript" type="text/javascript" src="guess.js" >
-	 
+	 	yourGuess();
 	 </script>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Hot or Cold</title>
@@ -17,22 +17,25 @@
 		<h3>We are thinking of a number between 1 and 100...</h3>
 
 		<div id="box">
-		<input id="userguess" type="number" placeholder="enter number here" required name="number">
-		<input  id="guess" type="submit" onclick="yourGuess()" value="Guess">
+		<input id="usernumber" type="number" placeholder="enter number here" required name="usernumber">
+		<input  id="guess" type="submit"  onclick="yourGuess()" value="Guess">
+		<input  id="newgame" type="submit" onclick="newGame()" value="Start New Game">
 		</div><!-- #container -->
 		
-		<input  id="newgame" type="submit" onclick="newGame()" value="Start New Game">
-
+		<p id="answer"></p>
+	<!--<p id="retype"></p>
 		<p id="scorching"></p>
 		<p id="hot"></p>
 		<p id="warm"></p>
 		<p id="cool"></p>
 		<p id="cold"></p>
-		<p id="freezing"></p>
-		<p id="answer"></p>
+		<p id="freezing"></p> -->
+		<h5>Previous Guesses</h5>
+		<ol id="prev_guesses">
+			
+		</ol>
 
-	
-	
+		<p id="hottercolder"></p>
 		
 	</div><!-- .container -->
 

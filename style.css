@@ -65,7 +65,7 @@ table {
 }
 
 #box {
-	height: 120px;
+	height: 170px;
 	width: 200px;
 	background-color: rgb(200, 25,25);
 	border: 1px solid #000;
@@ -73,7 +73,7 @@ table {
 	margin: 0 auto;
 }
 
-#userguess {
+#usernumber {
 	width: 140px;
 	height: 50px;
 	margin: 10px auto;
@@ -108,4 +108,33 @@ h3 {
 }
 .hot {
 	color: rgb(255,50,0);
+}
+#answer {
+	margin-top: 20px;
+	font-size: 1.3em;
+}
+
+#scorching, #hot, #warm {
+	color: rgb(255,50,0);
+}
+#scorching {
+	font-size: 1.5em;
+}
+#hot {
+	font-size: 1.3em;
+}
+
+#freezing, #cold, #cool {
+	color: rgb(0,0,255);
+}
+#freezing {
+	font-size: .7em;
+}
+
+#cold {
+	font-size: .85em;
+}
+h5 {
+	text-decoration: underline;
+	margin: 10px auto;
 }
