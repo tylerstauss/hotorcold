@@ -76,6 +76,9 @@ function yourGuess()
 function newGame(){
 	    correct = Math.floor((Math.random() * 100)+1);
 	    var guess_array = [];
+	    $('#answer').html("");
+	    $('#prev_guesses').remove();
+
 	    }
 
 
